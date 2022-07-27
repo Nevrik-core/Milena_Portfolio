@@ -51,30 +51,3 @@
     }
 }
 
-@media (max-width: 380px) {
-    .container {
-        width: 100%;
-       
-        padding: 0 30px;
-        
-    }
-    .promo {
-        &__title {
-
-            line-height: 39px;
-            width: 300px;
-        }
-
-        &__subtitle {
-            &::before {
-                top: 193px;
-            }
-
-            padding-top: 400px;
-        }
-
-        &__btns {
-            margin-top: 0;
-        }
-    }
-}
