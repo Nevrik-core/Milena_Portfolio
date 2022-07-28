@@ -8,12 +8,22 @@
     .container {
         max-width: 720px;
     }
+    .title {
+        &_fz48 {
+            font-size: 32px;
+            margin: 0;
+        }
+        &_fz16 {
+            font-size: 15px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
     }
+   
 }
 
 @media (max-width: 576px) {

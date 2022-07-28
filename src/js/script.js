@@ -34,7 +34,8 @@ function onGridImageClick(e) {
     <img src="${e.target.src}">
 `)
 
-instance.show();
+    instance.show();
+    
 }
 const gallery = document.querySelector('.gallery__grid');
 console.log(gallery);
