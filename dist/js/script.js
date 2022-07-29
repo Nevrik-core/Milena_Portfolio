@@ -25,6 +25,7 @@ document.addEventListener('keydown', e => {
 });
 
 function onGridImageClick(e) {
+    e.preventDefault();
     if (!e.target.classList.contains('grid_img')) {
         return;
     }
@@ -35,7 +36,12 @@ function onGridImageClick(e) {
 `)
 
     instance.show();
-    
+
+    document.addEventListener('keydown', e => {
+      if (e.code === 'Escape') {
+         instance.close();
+      }
+     });
 }
 const gallery = document.querySelector('.gallery__grid');
 console.log(gallery);

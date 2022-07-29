@@ -8,6 +8,24 @@
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
+        margin-left: 30px;
+    }
+    .about {
+        padding-top: 55px;
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 20px;
+        }
+        &__skills {
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 230px);
+                grid-auto-rows: 1fr;
+                column-gap: 30px;
+            &-item {
+                    grid-template-columns: 40px 190px;
+                    column-gap: 25px;
+                }
+            }
+            
     }
     
 }
@@ -25,7 +43,7 @@
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
-        margin-left: 30px;
+        margin-left: 20px;
     }
     
     .promo {
@@ -44,13 +62,33 @@
     .title_fz48 {
         font-size: 36px;
      }
+    .title_fz36 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    } 
+    .about {
+        &__wrapper {
+        grid-template-columns: 300px 380px;
+            column-gap: 20px;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px,auto);
+            &-item {
+                grid-template-columns: 40px 300px;
+                // grid-template-rows: 75px;
+                column-gap: 20px;
+            }
+        }
+    } 
 }
 
 @media (max-width: 768px) {
     .container {
         
-        max-width: 600px;
-        margin-left: 30px;
+        max-width: 540px;
+        margin-left: 20px;
     }
         .menu {
             &__link {
@@ -60,8 +98,8 @@
             }
         }
     .promo {
-        padding-top: 750px;
-        padding-left: 30px;
+        padding-top: 600px;
+        padding-left: 10px;
         &__link {
           font-size: 21px;
         }
@@ -74,7 +112,7 @@
     }
     .title {
         &_fz48 {
-            font-size: 39px;
+            font-size: 36px;
             margin: 0;
             margin-top: 10px;
         }
@@ -88,12 +126,28 @@
         padding-top: 40px;
 
         &__wrapper {
-            grid-template: 340px auto auto / 1fr;
+            grid-template: 792px auto auto / 540px;
+            row-gap: 60px;
+            
+            
         }
 
         &__photo {
             grid-row: unset;
-            width: 100vw;
+            width: 100%;
+        
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+            
+           
+            &-item {
+                grid-template-columns: 40px 189px;
+                
+                column-gap: 20px;
+                
+                
+            }
         }
     }
     .menu {
@@ -108,8 +162,8 @@
 @media (max-width: 576px) {
     .container {
         width: 100%;
-        padding: 0;
-        margin-left: 0;
+        padding: 0 10px;
+        margin: 0;
         
     }
     .title {
@@ -117,6 +171,9 @@
         &_fz48 {
             font-size: 27px;
             padding-top: 5px;
+        }
+        &_fz36 {
+
         }
         &_fz16 {
             
@@ -132,7 +189,7 @@
     }
     .promo {
         padding-top: 210px;
-        padding-left: 30px;
+        // padding-left: 10px;
         &__title {
 
             line-height: 39px;
@@ -149,6 +206,40 @@
 
         &__btns {
             margin-top: 20px;
+        }
+    }
+    .about {
+        padding-top: 20px;
+        padding-left: 5px;
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+            // grid-template-columns: 370px;
+        }
+        &__descr {
+            margin-top: 180px;
+            margin-right: 5px;
+        }
+        &__skills {
+            // margin: 0 auto;
+            grid-template-columns: 1fr;
+            &-item {
+                grid-template-columns: 70px 190px;
+            }
+        }
+        &__photo {
+            width: 98%;
+        }
+    }
+    .gallery {
+        &__grid {
+
+            grid-template-columns: repeat(3, 100px);
+            height: 50vh;
+            & img {
+                    width: 100px;
+                    height: 100px;
+                    
+                }
         }
     }
 }

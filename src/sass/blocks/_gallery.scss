@@ -1,7 +1,7 @@
 .gallery {
     background-color: rgb(7, 13, 14);
     padding-top: 20px;
-    min-height: 900px;
+    min-height: 500px;
     &__title {
         @include before_circle;
         z-index: 2;
